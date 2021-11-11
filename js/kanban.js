@@ -47,6 +47,10 @@ const create_item = () => {
 
 document.querySelectorAll('.drop').forEach(element => {
   element.addEventListener('drop', (event)=>{
-    event.preventDefault()
-    let id = event.dataTransfer.getData('text')})
+    event.preventDefault();
+    let id = event.dataTransfer.getData('text');
+    event.target.appendChild(document.getElementById(id));
+    }
+    )
+  element.addEventListener('dragover', (event)=> event.preventDefault());
 });
