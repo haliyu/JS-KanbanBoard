@@ -43,10 +43,9 @@ const create_item = () => {
 
   return item;
 
-
-
-
 };
 
 document.querySelectorAll('.drop').forEach(element => {
+  element.addEventListener('drop', (event)=>{
+    let id = event.dataTransfer.getData('text')})
 });
