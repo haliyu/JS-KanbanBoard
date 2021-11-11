@@ -17,22 +17,18 @@ add_btn.addEventListener('click', () => {
 
 const create_item = () => {
   let item = document.createElement('div');
-  item.classList.add(item);
+  item.classList.add('item');
   item.id = 'item-' + order;
   item.draggable = true;
 
-  item.addEventListener('dragstart', (e)=>{
-    return(
-      e.DataTransfer.setData('text', e.target.id)
-    );
-  });
-  item.addEventListener('dragend', (e)=>{
-    return(
-      e.DataTransfer.clearData()
-    )
-  });
+  item.addEventListener('dragstart', (event)=> event.dataTransfer.setData('text', event.target.id));
+  item.addEventListener('dragend', (event)=>  event.dataTransfer.clearData());
+  
   let input = document.createElement('input');
   item.appendChild(input);
+
+  let save_btn = document.createElement('button').innerHTML='Save';
+  save_btn.addEventListener('click', ()=>{} )
 
 };
 
