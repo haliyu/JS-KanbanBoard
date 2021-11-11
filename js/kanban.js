@@ -29,7 +29,14 @@ const create_item = () => {
 
   let save_btn = document.createElement('button');
   save_btn.innerHTML='Save';
-  save_btn.addEventListener('click', ()=>{} )
+  save_btn.addEventListener('click', ()=>{ 
+    error.innerHTML= '';
+    if (input.value !== '') {
+      
+    }
+  } );
+
+
 
 };
 
